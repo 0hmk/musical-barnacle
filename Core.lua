@@ -40,5 +40,5 @@ getgenv().getscriptclosures = function(script)
 end
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Text = "Loaded! Credits to flowers.",
-	Title = "{0}"
+	Title = "Daphnе"
 })
