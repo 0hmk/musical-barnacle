@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name = "Lua"
+                  extensions = ".lua">
+  <Properties>
+    <Property name="LineComment"
+              value="--"/>
+  </Properties>
+
+  <Digits name = "Digits"
+          bold = "false"
+          italic = "false"
+          color = "#a570ff"/>
+
+  <RuleSets>
+    <RuleSet ignorecase="false">
+      <Delimiters>~@$%^&amp;*()+=|\[]{};"'&lt;&gt; ,#:	</Delimiters>
+
+      <Span name = "BlockComment"
+            bold = "false"
+            italic = "false"
+            color = "#58e055"
+            stopateol = "false">
+        <Begin>--[[</Begin>
+        <End>]]</End>
+      </Span>
+
+      <Span name = "BlockComment2"
+            bold = "false"
+            italic = "false"
+            color = "#58e055"
+            stopateol = "false">
+        <Begin>--[=</Begin>
+        <End>=]</End>
+      </Span>
+
+	<Span name = "MultiLineString"
+            bold = "false"
+            italic = "false"
+            color = "#ffae00"
+            stopateol = "false">
+        <Begin>[[</Begin>
+        <End>]]</End>
+      </Span>
+	  
+	  <Span name = "MultiLineString2"
+            bold = "false"
+            italic = "false"
+            color = "#ffae00"
+            stopateol = "false">
+        <Begin>[=</Begin>
+        <End>=]</End>
+      </Span>
+
+      <Span name = "LineComment"
+            bold = "false"
+            italic = "false"
+            color = "#58e055"
+            stopateol = "true">
+        <Begin>--</Begin>
+      </Span>
+
+      <Span name = "StringOne"
+            bold = "false"
+            italic = "false"
+            color = "#ffae00"
+            stopateol = "true">
+        <Begin>"</Begin>
+        <End>"</End>
+      </Span>
+	  
+	  <Span name = "StringTwo"
+            bold = "false"
+            italic = "false"
+            color = "#ffae00"
+            stopateol = "true">
+        <Begin>'</Begin>
+        <End>'</End>
+      </Span>
+
+      <KeyWords name = "Keywords"
+                bold="true"
+                italic="false"
+                color="#ff3c7a">
+        <Key word = "and" />
+        <Key word = "break" />
+        <Key word = "do" />
+        <Key word = "else" />
+        <Key word = "elseif" />
+        <Key word = "end" />
+        <Key word = "false" />
+        <Key word = "for" />
+        <Key word = "function" />
+        <Key word = "if" />
+        <Key word = "in" />
+        <Key word = "local" />
+        <Key word = "nil" />
+        <Key word = "not" />
+        <Key word = "or" />
+        <Key word = "repeat" />
+        <Key word = "return" />
+        <Key word = "then" />
+        <Key word = "true" />
+        <Key word = "until" />
+        <Key word = "while" />
+      </KeyWords>
+	  
+	  <KeyWords name = "Others"
+                bold="true"
+                italic="false"
+                color="#59ffac">
+        <Key word = "game" />
+		<Key word = "shared" />
+        <Key word = "_G" />
+        <Key word = "getrenv" />
+        <Key word = "script" />
+        <Key word = "hookmetamethod" />
+        <Key word = "getnamecallmethod" />
+        <Key word = "getfenv" />
+        <Key word = "xpcall" />
+        <Key word = "warn" />
+        <Key word = "pcall" />
+        <Key word = "wait" />
+        <Key word = "task" />
+        <Key word = "task" />
+        <Key word = "checkcaller" />
+        <Key word = "hookfunction" />
+        <Key word = "print" />
+		<Key word = "debug" />
+		<Key word = "syn" />
+		<Key word = "request" />
+		<Key word = "http_request" />
+		<Key word = "getgenv" />
+		<Key word = "getreg" />
+		<Key word = "getgc" />
+		<Key word = "getinstances" />
+		<Key word = "getnilinstances" />
+		<Key word = "getscripts" />
+		<Key word = "getloadedmodules" />
+		<Key word = "getconnections" />
+		<Key word = "firesignal" />
+		<Key word = "fireclickdetector" />
+		<Key word = "fireproximityprompt" />
+		<Key word = "firetouchinterest" />
+		<Key word = "getsenv" />
+		<Key word = "getcallingscript" />
+		<Key word = "getscriptclosure" />
+		<Key word = "getscripthash" />
+		<Key word = "getrawmetatable" />
+		<Key word = "setrawmetatable" />
+		<Key word = "loadstring" />
+		<Key word = "dumpstring" />
+		<Key word = "decompile" />
+		<Key word = "setclipboard" />
+		<Key word = "setfflag" />
+		<Key word = "setnamecallmethod" />
+		<Key word = "getcustomasset" />
+		<Key word = "getsynasset" />
+		<Key word = "saveinstance" />
+		<Key word = "bit" />
+		<Key word = "bit32" />
+		<Key word = "Drawing" />
+		<Key word = "Krnl" />
+		<Key word = "IsElectron" />
+ 		<Key word = "require" />
+		<Key word = "base64decode" />
+		<Key word = "base64encode" />
+		<Key word = "checkclosure" />
+		<Key word = "issynapsefunction" />
+		<Key word = "iselectronfunction" />
+		<Key word = "setthreadcontext" />
+		<Key word = "getthreadcontext" />
+		<Key word = "is_synapse_function" />
+		<Key word = "is_electron_function" />
+		<Key word = "IsSynapseFunction" />
+		<Key word = "IsElectronFunction" />
+		<Key word = "FindFirstChild" />
+		<Key word = "GetChildren" />
+		<Key word = "GetDescendants" />
+		<Key word = "Destroy" />
+		<Key word = "IsA" />
+		<Key word = "Clone" />
+		<Key word = "ClearAllChildren" />
+		<Key word = "FindFirstAncestor" />
+		<Key word = "FindFirstAncestorOfClass" />
+		<Key word = "FindFirstAncestorWhichIsA" />
+		<Key word = "FindFirstChildOfClass" />
+		<Key word = "FindFirstChildWhichIsA" />
+		<Key word = "FindFirstDescendant" />
+		<Key word = "GetActor" />
+		<Key word = "IsDescendantOf" />
+		<Key word = "WaitForChild" />
+
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>
