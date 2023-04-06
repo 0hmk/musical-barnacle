@@ -16,8 +16,10 @@ local simRad, env, flags = false, getgenv(), {
 	["DebugGameServerHeaderBypass"] = false,
 	["QKick"] = 0	
 }
-for i,v in pairs(flags)do
-	setfflag(i,tostring(v))
+if setfflag then
+	for i,v in pairs(flags)do
+		setfflag(i,tostring(v))
+	end
 end
 if setsimulationradius and not simRad then
 	hookfunction(setsimulationradius,function(...)
