@@ -16,7 +16,7 @@ local simRad, env, flags = false, getgenv(), {
 	["DebugGameServerHeaderBypass"] = false,
 	["QKick"] = 0	
 }
-if setfflag then
+if setfflag and not KRNL_LOADED then
 	for i,v in pairs(flags)do
 		setfflag(i,tostring(v))
 	end
